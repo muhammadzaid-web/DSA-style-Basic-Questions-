@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <script>
+    //que:-1 Declare a variable num with any value. Use an if-else condition to check whether the number is positive, negative, or zero. Print the result (with the help of console.log).
+
+    let num = 0;
+    if (num > 0) {
+      console.log(`${num}is positive`);
+    } else if (num < 0) {
+      console.log(`${num}is negative`);
+    } else {
+      console.log(`${num}is zero`);
+    }
+
+    //que:-2 Create two variables, a and b, with different numbers. Write a program that compares them and prints which one is greater.
+    let a = 4;
+    let b = 4;
+    if (a > b) {
+      console.log(`${a} is greater than ${b}`);
+    } else if (a < b) {
+      console.log(`${b}is greater than ${a}`);
+    } else {
+      console.log("both numbers are equal");
+    }
+
+    //que:-3 Store a temperature value in a variable. Use a conditional statement to print:
+    // ● "Hot" if the temperature is above 30,
+    // ● "Warm" if it’s between 15 and 30,
+    // ● "Cold" if it’s below 15.
+    let temp = 20;
+    if (temp > 30) {
+      console.log("hot");
+    } else if (temp < 15) {
+      console.log("cold");
+    } else {
+      console.log("warm");
+    }
+
+    //for loop<-------------------------
+    //que:-4 Print Numbers from 1 to 10
+    //● Use a for loop to print the numbers from 1 to 10.
+
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+    }
+
+    //que:-5 Sum of First 10 Natural Numbers
+    //● Use a for loop to calculate and print the sum of the first 10 natural numbers (1 to 10).
+
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+      sum += i;
+    }
+    console.log(sum);
+
+    //que:-6 Print Even Numbers from 1 to 20
+    //● Use a for loop to print all even numbers between 1 and 20.
+    for (i = 1; i <= 20; i++) {
+      if (i % 2 == 0) {
+        console.log("even number =", i);
+      }
+    }
+
+    //que:-7 Find the Factorial of a Number
+    //● Use a for loop to calculate the factorial of a given number n.
+
+    // let factorial;
+    // let n=4;
+    // for (let i = 0; i <= n; i++) {
+    //     result=i*i+1;
+    //     factorial=result;
+    //   // console.log(factorial);
+    // }
+    // console.log(factorial);//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    //que:- as above
+    // function factorial(n){
+    //     let facto=1;
+    //     for (let i = 1; i <= n; i++) {
+    //        facto*=i;
+    //     }
+    //     return facto;
+    // };
+    // // for calling;
+    // console.log(factorial(4));
+
+    //function <--------------------
+    //que:-8 Create a function to add two numbers.
+    //Write a function called addNumbers that takes two numbers as arguments, adds them, and
+    //prints the sum using console.log.
+    function addNumers(a, b) {
+      console.log("the sum of a and b", a + b);
+    }
+    addNumers(5, 10);
+
+    //que:-9 Define a function squareNumber that takes a number as an argument and prints its square using console.log.
+    function square(n) {
+      console.log("the square of n = ", n * n);
+    }
+    square(5);
+
+    //que:-10 Write a function called checkEvenOdd that takes a number as input and prints whether it's even or odd
+    function checkEvenOdd(n) {
+      if (n % 2 == 0) {
+        console.log(`${n} is even`);
+      } else {
+        console.log(`${n} is odd`);
+      }
+    }
+    console.log(checkEvenOdd(10));
+
+    //que11:- Define a function printNumbers that takes a number N as input and prints all numbers from 1 to N using a loop.
+    function printNumbers(n) {
+      for (i = 1; i < n; i++) {
+        console.log(i);
+      }
+    }
+    printNumbers(10);
+
+    //que:-12 Write a function called multiplyNumbers that takes two arguments, multiplies them, and prints the result using console.log.
+    function multiplyNumbers(a, b) {
+      console.log(a * b);
+    }
+    multiplyNumbers(2, 5);
+
+    //que:-13 Create a function called findLargest that takes two numbers as arguments and prints the larger number using console.log
+    function findLargest(a, b) {
+      if (a > b) {
+        console.log("The largest numer is  " + a);
+      } else {
+        console.log("The largest Number is  " + b);
+      }
+    }
+    findLargest(20, 30);
+
+    //que:-14 Create a function called findFactorial that takes a number as an argument and prints the factorial of that number.
+
+    function findFactorial(num) {
+      let result = 1;
+      for (i = 1; i <= num; i++) {
+        //    console.log( result*=i)
+        result *= i;
+      }
+      return result;
+    }
+    console.log(findFactorial(5));
+
+    //string start<-----------------------------------
+    //que:- 15.Concatenate Strings: Write a function that takes two strings as arguments and prints their concatenation.
+
+    function concatenationStr(str1, str2) {
+      console.log(str1 + str2);
+    }
+    concatenationStr("good", "morning");
+
+    //que:- 16. Count the Number of Characters: Write a function that accepts a string and counts how many characters (excluding spaces) it contains.
+
+    function countChar(str) {
+      let count = 0;
+      for (i = 0; i <= str.length - 1; i++) {
+        if (str[i] !== " ") {
+          count++;
+        }
+      }
+      return count;
+    }
+    console.log(countChar("hello  world"));
+
+    // que:-17 Check if Two Strings Are Equal: Write a function that compares two strings and checks if they are equal (case-sensitive comparison).
+
+    function checkStringEqual(str1, str2) {
+      if (str1 === str2) {
+        console.log("both are equal");
+      } else {
+        console.log("not equal");
+      }
+    }
+    checkStringEqual("Hello", "hello");
+
+    //que:- 18 Print Each Character of a String: Write a function that takes a string and prints each character of the string on a new line.
+
+    function containChar(str) {
+      for (i = 0; i <= str.length; i++) {
+        console.log(str[i]);
+      }
+    }
+    containChar("Hello");
+
+    //break & continue<-------------------------
+    //que:- 19
+    function checkChar(str, char) {
+      for (i = 0; i < str.length; i++) {
+        if (str == char) {
+          console.log("char found in str");
+          break;
+        } else {
+          console.log("char not found");
+          continue;
+        }
+        console.log(i)
+      }
+    }
+
+    checkChar("hello", "e");
+  </script>
+  <body></body>
+</html>
